@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "965933238201",
+    "firebase_url": "https://bodymindenergy-a0418.firebaseio.com",
+    "project_id": "bodymindenergy-a0418",
+    "storage_bucket": "bodymindenergy-a0418.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965933238201:android:aeed5988fa617448905868",
+        "android_client_info": {
+          "package_name": "com.example.bme_003"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965933238201-e4cjo8pmenmhtlc7ctrm4era49ipigj0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bme_003",
+            "certificate_hash": "29f9c47fd80caa78291c61d7b638d1f117e02b47"
+          }
+        },
+        {
+          "client_id": "965933238201-6feoi26qoudkm6hmvab7pch98i472ar5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa8VahQ-rWLvUG42DmaIGcE6EgEqVXaG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965933238201-6feoi26qoudkm6hmvab7pch98i472ar5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
