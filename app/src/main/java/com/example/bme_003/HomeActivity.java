@@ -24,7 +24,6 @@ public class HomeActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private Fragment selectorFragment;
 
-
     //Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -43,8 +42,8 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
             case R.id.level:
                 Log.i("Item Selected","Level");
-                //Intent intent = new Intent(this, level.class);
-                //startActivity(intent);
+                Intent intent = new Intent(this, LevelActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.profile:
                 Log.i("Item Selected","Profile");
@@ -58,7 +57,6 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
         }
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
