@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">BME_003</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">BME</string>
+    <string-array name="Spinner_items">
+        <item>Who am I?</item>
+        <item>Fire </item>
+        <item>Water </item>
+        <item>Air </item>
+        <item>Earth </item>
+    </string-array>
 </resources>

@@ -47,12 +47,9 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
             case R.id.profile:
                 Log.i("Item Selected","Profile");
-                //Intent intent2 = new Intent(this, profile.class);
-                //startActivity(intent2);
+                Intent intent2 = new Intent(this, ProfileActivity.class);
+                startActivity(intent2);
                 return true;
-
-
-
             default:
                 return true;
         }
