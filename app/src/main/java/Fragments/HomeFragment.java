@@ -3,10 +3,6 @@ package Fragments;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -14,9 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.bme_003.LevelActivity;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
 import com.example.bme_003.R;
 import com.example.bme_003.ggactivity;
+import com.example.bme_003.stepCounterActivity;
 
 import org.json.JSONObject;
 
@@ -28,11 +27,13 @@ import java.net.URL;
 
 public class HomeFragment extends Fragment {
 
+
     String ip ="";
     TextView astrodataView2;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
         switch (item.getItemId()){
             case R.id.settings:
                 Log.i("Item Selected","Settings");
@@ -65,6 +66,14 @@ public class HomeFragment extends Fragment {
         DownloadTask task = new DownloadTask();
         task.execute("https://api.ipify.org?format=json");
 
+        TextView steps = view.findViewById(R.id.steps);
+        steps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), stepCounterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
