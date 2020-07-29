@@ -16,14 +16,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 import Model.User;
-public class ProfileActivity extends AppCompatActivity implements WeightDialog.WeightDialogListener, GenderDialog.GenderDialogListener, HeightDialog.HeightDialogListner {
+public class ProfileActivity extends AppCompatActivity implements WeightDialog.WeightDialogListener, GenderDialog.GenderDialogListener, HeightDialog.HeightDialogListner, AgeDialog.AgeDialogListner {
 
     ImageView displayPicture;
     private FirebaseUser fUser;
     private Button weightButton;
     private  Button genderButton;
     private  Button heightButton;
-
+    private  Button ageButton;
 
     public void onClickPic(View view) {
         Intent intentPic = new Intent(this, profileChangePicture.class);
@@ -60,6 +60,19 @@ public class ProfileActivity extends AppCompatActivity implements WeightDialog.W
                 openHeightDialog();
             }
         });
+
+        ageButton = (Button)findViewById(R.id.age);
+        ageButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                openAgeDialog();
+            }
+        });
+    }
+
+    private void openAgeDialog() {
+        AgeDialog ageDialog = new AgeDialog();
+        ageDialog.show(getSupportFragmentManager(),"example dialog");
 
     }
 
@@ -108,6 +121,8 @@ public class ProfileActivity extends AppCompatActivity implements WeightDialog.W
         Log.i(gender,"saas");
     }
 
+    @Override
+    public void applyAge(String age) { Log.i(age,"saas"); }
 
     @Override
     public void applyheight(String feet, String inch) {

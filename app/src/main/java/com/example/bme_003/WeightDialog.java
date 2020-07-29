@@ -25,7 +25,7 @@ public class WeightDialog extends AppCompatDialogFragment {
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.layout_weightdialog,null);
-        builder.setView(view).setTitle("enterweight").setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+        builder.setView(view).setTitle("Weight").setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 

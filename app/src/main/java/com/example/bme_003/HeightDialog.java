@@ -27,7 +27,7 @@ public class HeightDialog extends AppCompatDialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.layout_height,null);
         builder.setView(view)
-                .setTitle("Login")
+                .setTitle("Height")
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

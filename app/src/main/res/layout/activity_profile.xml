@@ -123,12 +123,36 @@
                         </Button>
 
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="125dp"
+                            android:layout_height="match_parent"
+                            android:text="Age"
+                            android:id="@+id/age"
+                            ></Button>
+
+                        <Button
+                            android:layout_width="132dp"
+                            android:layout_height="match_parent"
+                            android:text="Known BP"
+                            android:id="@+id/bloodpressure"
+                            ></Button>
+
+                        <Button
+                            android:layout_width="125dp"
+                            android:layout_height="match_parent"
+                            android:text="Pulse"
+                            android:id="@+id/pulse"
+                            >
+
+                        </Button>
+                    </LinearLayout>
                 </LinearLayout>
             </ScrollView>
-
         </LinearLayout>
-
     </LinearLayout>
-
-
 </RelativeLayout>

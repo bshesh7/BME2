@@ -1,5 +1,5 @@
 package com.example.bme_003;
-
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,24 +10,20 @@ import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class GenderDialog extends AppCompatDialogFragment {
-
-    private EditText editTextGender;
-    private GenderDialogListener listener;
-
+public class AgeDialog extends AppCompatDialogFragment {
+    private EditText editTextAge;
+    private  AgeDialogListner listner;
 
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.layout_genderdialog, null);
+        View view = inflater.inflate(R.layout.layout_agedialog, null);
         builder.setView(view)
-                .setTitle("Gender")
+                .setTitle("Age")
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -37,12 +33,12 @@ public class GenderDialog extends AppCompatDialogFragment {
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String gender = editTextGender.getText().toString();
-                        listener.applyText(gender);
+                        String age = editTextAge.getText().toString();
+                        listner.applyAge(age);
                     }
-                });
-        editTextGender = view.findViewById(R.id.edit_gender);
-
+                })
+        ;
+        editTextAge = view.findViewById(R.id.edit_age);
 
         return builder.create();
     }
@@ -50,16 +46,16 @@ public class GenderDialog extends AppCompatDialogFragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
+
         try {
-            listener = (GenderDialogListener)context;
+            listner = (AgeDialogListner) context;
         } catch (ClassCastException e) {
-            throw new ClassCastException(context.toString()+ "must implement Ecmape ia s sda");
+            throw new ClassCastException(context.toString() + "must implement ExampleDialogListner");
+
         }
     }
 
-    public interface GenderDialogListener{
-        void applyText(String gender);
-
+    public interface AgeDialogListner{
+        void applyAge(String age);
     }
-
 }
