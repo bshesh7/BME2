@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.bme_003.R;
 import com.example.bme_003.ggactivity;
-import com.example.bme_003.stepCounterActivity;
 
 import org.json.JSONObject;
 
@@ -61,12 +60,13 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home,container,false);
 
         //Text views
-        astrodataView2 = view.findViewById(R.id.astrodataView2);
+        //astrodataView2 = view.findViewById(R.id.astrodataView2);
         //for API call
+        /*
         DownloadTask task = new DownloadTask();
         task.execute("https://api.ipify.org?format=json");
 
-        TextView steps = view.findViewById(R.id.steps);
+        TextView steps = view.findViewById(R.id.biner_points);
         steps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,8 +74,9 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
+         */
         return view;
+
     }
     public class DownloadTask extends AsyncTask<String,Void, String> {
 

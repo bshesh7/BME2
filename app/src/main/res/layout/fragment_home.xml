@@ -14,108 +14,7 @@
             android:id="@+id/topinfobar"
             android:layout_width="match_parent"
             android:layout_height="173dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="126dp"
-                android:layout_height="match_parent"
-                android:background="#490A2F63"
-                android:backgroundTint="#FFFFFF"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <TextView
-                    android:layout_width="83dp"
-                    android:layout_height="48dp"
-                    android:maxLines="1"
-                    android:text="Routine"
-                    android:textSize="20sp"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Week 1"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Day 6"
-                    android:textStyle="bold"></TextView>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="114dp"
-                android:layout_height="match_parent"
-                android:background="#490A2F63"
-                android:backgroundTint="#FFFFFF"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <TextView
-                    android:layout_width="91dp"
-                    android:layout_height="54dp"
-                    android:maxLines="2"
-                    android:text="Today's Gain"
-                    android:textSize="20sp"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:layout_width="56dp"
-                    android:layout_height="wrap_content"
-                    android:text="Gain"
-                    android:textColor="@color/colorGreen"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Number"
-                    android:textColor="@color/colorRed"
-                    android:textStyle="bold"></TextView>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="#490A2F63"
-                android:backgroundTint="#FFFFFF"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <TextView
-                    android:layout_width="102dp"
-                    android:layout_height="50dp"
-                    android:maxLines="2"
-                    android:text="BME BALANCE"
-                    android:textSize="20sp"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Coins"
-                    android:textColor="@color/colorYellow"
-                    android:textStyle="bold"
-
-                    ></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="100000000"
-                    android:textColor="@color/colorYellow"></TextView>
-
-            </LinearLayout>
-
-
-
-        </LinearLayout>
+            android:orientation="horizontal"/>
 
         <ScrollView
             android:id="@+id/bottomscroll"
@@ -128,121 +27,87 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
                 <TextView
-                    android:id="@+id/astronomicalsync"
+                    android:id="@+id/biner_points"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#65636060"
+                    android:background="#1AAF4C4C"
+
                     android:paddingLeft="5dp"
-                    android:shadowColor="#752A2A"
-                    android:text="Astronomical Sync"
-                    android:textColor="@color/colorBlack"
-                     />
-
-                <TextView
-                    android:id="@+id/astrodataView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="37dp"
-                    android:background="#65636060"
-                    android:padding="4dp"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="13dp"
-                     />
-
+                    android:paddingTop="5dp"
+                    android:text="Today's"
+                    android:textColor="@color/colorBlack" />
 
                 <TextView
                     android:id="@+id/steps"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:background="#1AFBFBFB"
-                    android:onClick="onClickSteps"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="39dp"
+                    android:background="#1AAF4C4C"
+
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
                     android:text="Steps"
-                    android:textColor="@color/colorBlack" />
+                    android:textColor="@color/colorPrimaryDark" />
 
                 <TextView
-                    android:id="@+id/victory"
+                    android:id="@+id/pointstoday"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:background="#65636060"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
-                    android:text="Victory hour of the day"
-                    android:textColor="@color/colorBlack" />
+                    android:layout_height="39dp"
+                    android:background="#1AAF4C4C"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:text="Points Earned:"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/calorie"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:background="#1AAF4C4C"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:text="Calorie Burned:"
+                    android:textColor="@color/colorPrimaryDark" />
+
+
+
+            </LinearLayout>
+
 
 
                 <TextView
-                    android:id="@+id/water"
+                    android:id="@+id/biner_points"
                     android:layout_width="match_parent"
-                    android:layout_height="62dp"
+                    android:layout_height="121dp"
                     android:background="#1AFBFBFB"
                     android:paddingLeft="5dp"
                     android:paddingTop="5dp"
-                    android:text="Water for the day"
+                    android:text="Biner Points"
                     android:textColor="@color/colorBlack" />
 
                 <TextView
-                    android:id="@+id/air"
+                    android:id="@+id/biner_nearme"
                     android:layout_width="match_parent"
-                    android:layout_height="62dp"
-                    android:background="#65636060"
+                    android:layout_height="115dp"
+                    android:background="#1AAF4C4C"
                     android:paddingLeft="5dp"
                     android:paddingTop="5dp"
-                    android:text="Air for the day"
+                    android:text="Biner Near Me"
                     android:textColor="@color/colorBlack" />
 
                 <TextView
-                    android:id="@+id/foodforday"
+                    android:id="@+id/my_trails"
                     android:layout_width="match_parent"
-                    android:layout_height="62dp"
+                    android:layout_height="124dp"
                     android:background="#1AFBFBFB"
                     android:paddingLeft="5dp"
                     android:paddingTop="5dp"
-                    android:text="Food for the day"
-                    android:textColor="@color/colorBlack" />
-
-
-                <TextView
-                    android:id="@+id/fasting"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:background="#65636060"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
-                    android:text="Fasting Status"
-                    android:textColor="@color/colorBlack" />
-
-
-                <TextView
-                    android:id="@+id/activityreport"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
-
-                    android:text="Activity Report"
-                    android:textColor="@color/colorBlack" />
-
-                <TextView
-                    android:id="@+id/mind"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:background="#65636060"
-                    android:paddingLeft="5dp"
-
-                    android:paddingTop="5dp"
-                    android:text="Mind Sync"
-                    android:textColor="@color/colorBlack" />
-
-                <TextView
-                    android:id="@+id/astrodataView"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
-
-                    android:text="Mind Sync"
+                    android:text="My Trials"
                     android:textColor="@color/colorBlack" />
 
 
